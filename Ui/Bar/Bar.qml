@@ -9,19 +9,6 @@ Rectangle {
     height: parent.height / 12
     color: "transparent"
 
-//    Rectangle{
-//        id: barbackground
-//        color: "white"
-//        radius: 5
-//        opacity: 0.6
-//        anchors{
-//            top: parent.top
-//            left: parent.left
-//            right: parent.right
-//            bottom: parent.bottom
-//        }
-//    }
-
     Rectangle {
         id: fst3rd
         color: "transparent"
@@ -45,19 +32,19 @@ Rectangle {
         }
 
         Rectangle{
-            id: leftseparator
-            width: 2
-            radius: 1
-            opacity: 0.4
-            height: parent.height * 4 / 5
-            anchors.left: parent.left
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: parent.height / 10
-            anchors.leftMargin: -1
+            id: appsbackground
+            radius: 5
+            opacity: 0.6
+            anchors{
+                top: parent.top
+                bottom: parent.bottom
+                left: parent.left
+                right: parent.right
+            }
         }
 
         Item {
-            id:radioicon
+            id:moreappsicon
             width: parent.width / 5
             height: width
 
@@ -69,7 +56,7 @@ Rectangle {
 
             Image {
                 opacity: 0.9
-                source: "../Icons/Radio.png"
+                source: "../Icons/MoreApps.png"
                 horizontalAlignment: Image.AlignHCenter
                 verticalAlignment: Image.AlignVCenter
                 fillMode: Image.PreserveAspectFit
@@ -95,7 +82,7 @@ Rectangle {
             anchors {
                 top: parent.top
                 bottom: parent.bottom
-                left: radioicon.right
+                left: moreappsicon.right
             }
 
             Image {
@@ -210,18 +197,6 @@ Rectangle {
                 }
             }
         }
-
-        Rectangle{
-            id: rightseparator
-            width: 2
-            radius: 1
-            opacity: 0.4
-            height: parent.height * 4 / 5
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: parent.height / 10
-            anchors.rightMargin: -1
-        }
     }
 
     Rectangle {
@@ -263,39 +238,39 @@ Rectangle {
                     }
                 }
 
-                Image {
-                    id: settingsicon
-                    opacity: 0.9
-                    source: "../Icons/Settings.png"
-                    horizontalAlignment: Image.AlignHCenter
-                    verticalAlignment: Image.AlignVCenter
-                    fillMode: Image.PreserveAspectFit
-                    height: parent.height
-                    width: parent.width
-                    NumberAnimation {
-                        id: slideAnimation
-                        target: windowcontent.settingsapp
-                        property: "y"
-                        from: windowcontent.height - windowcontent.settingsapp.height;
-                        to: windowcontent.height;
-                        duration: 300
-                        easing.type: Easing.InOutQuad
-                    }
+//                Image {
+//                    id: settingsicon
+//                    opacity: 0.9
+//                    source: "../Icons/Settings.png"
+//                    horizontalAlignment: Image.AlignHCenter
+//                    verticalAlignment: Image.AlignVCenter
+//                    fillMode: Image.PreserveAspectFit
+//                    height: parent.height
+//                    width: parent.width
+//                    NumberAnimation {
+//                        id: slideAnimation
+//                        target: windowcontent.settingsapp
+//                        property: "y"
+//                        from: windowcontent.height - windowcontent.settingsapp.height;
+//                        to: windowcontent.height;
+//                        duration: 300
+//                        easing.type: Easing.InOutQuad
+//                    }
 
-                    MouseArea{
-                        anchors.fill: parent
-                        acceptedButtons: Qt.LeftButton
-                        hoverEnabled: true
-                        onClicked: {
-                            if (windowcontent.settingsapp.visible) {
-                                slideAnimation.start()
-                                closetimer.start()
-                            } else {
-                                windowcontent.settingsapp.visible = true;
-                            }
-                        }
-                    }
-                }
+//                    MouseArea{
+//                        anchors.fill: parent
+//                        acceptedButtons: Qt.LeftButton
+//                        hoverEnabled: true
+//                        onClicked: {
+//                            if (windowcontent.settingsapp.visible) {
+//                                slideAnimation.start()
+//                                closetimer.start()
+//                            } else {
+//                                windowcontent.settingsapp.visible = true;
+//                            }
+//                        }
+//                    }
+//                }
             }
         }
         Rectangle {
@@ -318,16 +293,16 @@ Rectangle {
                     right: parent.right
                     margins: (parent.height - height) / 2
                 }
-                Image {
-                    opacity: 0.9
-                    source: "../Icons/Settings.png"
-                    horizontalAlignment: Image.AlignHCenter
-                    verticalAlignment: Image.AlignVCenter
-                    fillMode: Image.PreserveAspectFit
-                    height: parent.height
-                    width: parent.width
-                }
-                }
+//                Image {
+//                    opacity: 0.9
+//                    source: "../Icons/Settings.png"
+//                    horizontalAlignment: Image.AlignHCenter
+//                    verticalAlignment: Image.AlignVCenter
+//                    fillMode: Image.PreserveAspectFit
+//                    height: parent.height
+//                    width: parent.width
+//                }
+            }
 
         }
 
