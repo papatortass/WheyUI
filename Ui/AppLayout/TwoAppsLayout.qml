@@ -3,32 +3,31 @@ import QtQuick 2.15
 Rectangle {
     id: apps
     color: "transparent"
-    opacity: 0.4
 
     Rectangle{
         id: leftapp
-        color: "black"
+        color: "white"
         width: parent.width / 2
-        radius: 10
+        radius: 5
         anchors{
             top: parent.top
             left: parent.left
             bottom: parent.bottom
-            margins: 5
+            margins: 10
         }
     }
 
     Rectangle{
         id: rightapp
-        color: "black"
+        color: "white"
         width: parent.width / 2
-        radius: 10
+        radius: 5
         anchors{
             top: parent.top
             right: parent.right
             left: leftapp.right
             bottom: parent.bottom
-            margins: 5
+            margins: 10
         }
     }
 }

@@ -28,6 +28,7 @@ Rectangle {
             left: parent.left
             right: parent.right
             top: parent.top
+            bottomMargin: 10
         }
     }
 
@@ -39,6 +40,7 @@ Rectangle {
             left: parent.left
             right: parent.right
             top: parent.top
+            bottomMargin: 10
         }
     }
     OneAppLayout{
@@ -49,6 +51,7 @@ Rectangle {
             left: parent.left
             right: parent.right
             top: parent.top
+            bottomMargin: 10
         }
     }
 

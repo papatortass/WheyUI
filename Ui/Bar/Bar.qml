@@ -9,18 +9,18 @@ Rectangle {
     height: parent.height / 12
     color: "transparent"
 
-    Rectangle{
-        id: barbackground
-        color: "black"
-        radius: 20
-        opacity: 0.6
-        anchors{
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-    }
+//    Rectangle{
+//        id: barbackground
+//        color: "white"
+//        radius: 5
+//        opacity: 0.6
+//        anchors{
+//            top: parent.top
+//            left: parent.left
+//            right: parent.right
+//            bottom: parent.bottom
+//        }
+//    }
 
     Rectangle {
         id: fst3rd
@@ -295,6 +295,145 @@ Rectangle {
                             }
                         }
                     }
+                }
+            }
+        }
+        Rectangle {
+            id: snd5th
+            color: "transparent"
+            width: parent.width / 5
+            anchors.left: fst5th.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+
+            property bool settingsAppVisible: false
+
+            Item {
+                height: parent.height * 2 / 3
+                width: height
+
+                anchors {
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
+                    margins: (parent.height - height) / 2
+                }
+                Image {
+                    opacity: 0.9
+                    source: "../Icons/Settings.png"
+                    horizontalAlignment: Image.AlignHCenter
+                    verticalAlignment: Image.AlignVCenter
+                    fillMode: Image.PreserveAspectFit
+                    height: parent.height
+                    width: parent.width
+                }
+                }
+
+        }
+
+
+        Rectangle{
+            id: volumebackground
+            radius: 5
+            opacity: 0.6
+            anchors{
+                top: parent.top
+                bottom: parent.bottom
+                left: trd5th.left
+                right: fft5th.right
+            }
+        }
+
+        Rectangle {
+            id: trd5th
+            color: "transparent"
+            width: parent.width / 5
+            anchors.left: snd5th.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+
+            property bool settingsAppVisible: false
+
+            Item {
+                height: parent.height /2
+                width: height
+
+                anchors {
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
+                    margins: (parent.height - height) / 2
+                }
+                Image {
+                    opacity: 0.4
+                    source: "../Icons/VolumeDown.png"
+                    horizontalAlignment: Image.AlignHCenter
+                    verticalAlignment: Image.AlignVCenter
+                    fillMode: Image.PreserveAspectFit
+                    height: parent.height
+                    width: parent.width
+                }
+            }
+        }
+        Rectangle {
+            id: frt5th
+            color: "transparent"
+            width: parent.width / 5
+            anchors.left: trd5th.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+
+            property bool settingsAppVisible: false
+
+            Item {
+                height: parent.height /2
+                width: height
+
+                anchors {
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
+                    margins: (parent.height - height) / 2
+                }
+                Image {
+                    opacity: 0.8
+                    source: "../Icons/Volume2.png"
+                    horizontalAlignment: Image.AlignHCenter
+                    verticalAlignment: Image.AlignVCenter
+                    fillMode: Image.PreserveAspectFit
+                    height: parent.height
+                    width: parent.width
+                }
+            }
+        }
+        Rectangle {
+            id: fft5th
+            color: "transparent"
+            width: parent.width / 5
+            anchors.left: frt5th.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+
+            property bool settingsAppVisible: false
+
+            Item {
+                height: parent.height /2
+                width: height
+
+                anchors {
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
+                    margins: (parent.height - height) / 2
+                }
+                Image {
+                    opacity: 0.4
+                    source: "../Icons/VolumeUp.png"
+                    horizontalAlignment: Image.AlignHCenter
+                    verticalAlignment: Image.AlignVCenter
+                    fillMode: Image.PreserveAspectFit
+                    height: parent.height
+                    width: parent.width
                 }
             }
         }

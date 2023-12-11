@@ -1,6 +1,9 @@
 import QtQuick
+import QtMultimedia
+import QtWebEngine
 import "Ui"
 import "Ui/Bar"
+import "Ui/Icons"
 import "Ui/AppLayout"
 import "Ui/Apps/SettingsApp"
 
@@ -12,18 +15,17 @@ Window {
     title: qsTr("WheyUI")
     color: "transparent"
 
-    Rectangle{
+    Item{
         anchors{
             top:parent.top
             bottom: parent.bottom
             left:parent.left
             right: parent.right
         }
-        gradient:Gradient{
 
-            orientation: Gradient.Horizontal
-            GradientStop{position: 0.1; color:"#434d6c"}
-            GradientStop{position: 1.0; color:"#ff00ff"}
+        Image {
+            id: wallpapaer
+            source: "Ui/Icons/Wallpaper.png"
         }
     }
 
@@ -52,8 +54,7 @@ Window {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-            margins: 10
+            margins: 20
         }
-        radius: 20
     }
 }

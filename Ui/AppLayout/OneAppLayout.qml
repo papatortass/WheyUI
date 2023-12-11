@@ -2,8 +2,7 @@ import QtQuick 2.15
 
 Rectangle{
     id: app
-    opacity: 0.4
-    color: "black"
-    anchors.margins: 5
-    radius: 10
+    color: "white"
+    anchors.margins: 10
+    radius: 5
 }

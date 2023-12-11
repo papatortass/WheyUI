@@ -5,47 +5,46 @@ import "../Apps/MapsApp"
 Rectangle {
     id: apps
     color: "transparent"
-    opacity: 0.8
 
     Rectangle{
         id: leftapp
-        color: "black"
+        color: "white"
         width: parent.width * 3 / 5
-        radius: 10
+        radius: 5
         anchors{
             top: parent.top
             left: parent.left
             bottom: parent.bottom
-            margins: 5
+            margins: 20
         }
     }
 
     Rectangle{
         id: toprightapp
-        color: "black"
+        color: "white"
         width: parent.width * 2 / 5
         height: parent.height / 2
-        radius: 10
+        radius: 5
         anchors{
             top: parent.top
             right: parent.right
             left: leftapp.right
-            margins: 5
+            margins: 20
         }
     }
 
     Rectangle{
         id: bottomrightapp
-        color: "black"
+        color: "white"
         width: parent.width / 3
         height: parent.height / 2
-        radius: 10
+        radius: 5
         anchors{
             top: toprightapp.bottom
             right: parent.right
             left: leftapp.right
             bottom: parent.bottom
-            margins: 5
+            margins: 20
         }
 
         MapsApp{
@@ -55,7 +54,7 @@ Rectangle {
                 left: parent.left
                 bottom: parent.bottom
                 right: parent.right
-                margins: 10
+                margins: 5
             }
         }
     }

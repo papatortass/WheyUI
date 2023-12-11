@@ -1,9 +1,9 @@
 import QtQuick 2.15
+import QtQuick.Effects
 import QtLocation
 import QtPositioning
 
 Item{
-
     Plugin {
         id: mapPlugin
         name: "osm"
@@ -59,5 +59,29 @@ Item{
             sequence: StandardKey.ZoomOut
             onActivated: map.zoomLevel = Math.round(map.zoomLevel - 1)
         }
+    }
+
+    Rectangle{
+        id:searchbackground
+        color: "white"
+        radius: 5
+        width: parent.width - 20
+        height: parent.height / 5
+        anchors{
+            top: map.top
+            left: parent.left
+            right: parent.right
+            margins: 10
+        }
+    }
+
+    MultiEffect{
+        source:searchbackground
+        anchors.fill: searchbackground
+        shadowBlur: 2
+        shadowEnabled: true
+        shadowColor: "black"
+        shadowVerticalOffset: 5
+        shadowHorizontalOffset: 5
     }
 }
