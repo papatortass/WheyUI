@@ -8,9 +8,9 @@ import "Ui/AppLayout"
 import "Ui/Apps/SettingsApp"
 
 Window {
-    id: window
-    width: 1920
-    height: 1080
+    id: main
+    width: 1280
+    height: 720
     visible: true
     title: qsTr("WheyUI")
     color: "transparent"
@@ -45,6 +45,33 @@ Window {
             bottom: bar.top
             left: parent.left
             right: parent.right
+        }
+    }
+
+    property alias settingsapp: settingsapp
+
+    SettingsApp {
+        id:settingsapp
+        visible: false
+
+        property real initialY: parent.height
+        property real finalY: parent.height - settingsapp.height
+
+        NumberAnimation {
+            id: slideAnimation
+            target: settingsapp
+            property: "y"
+            duration: 300
+            easing.type: Easing.InOutQuad
+        }
+
+        onVisibleChanged: {
+            if (!visible) {
+            } else {
+                slideAnimation.from = initialY;
+                slideAnimation.to = finalY;
+            }
+            slideAnimation.start();
         }
     }
 

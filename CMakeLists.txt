@@ -36,6 +36,7 @@ qt_add_qml_module(appWheyUI
     RESOURCES Ui/Icons/Volume1.png Ui/Icons/Volume2.png Ui/Icons/Volume3.png
     RESOURCES Ui/Icons/VolumeDown.png Ui/Icons/VolumeUp.png
     RESOURCES Ui/Icons/MoreApps.png
+    RESOURCES Ui/Icons/Rafael.png
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

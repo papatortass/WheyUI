@@ -20,8 +20,8 @@ Rectangle {
             id: wifistatus
             width: parent.width * 4 / 5
             height: parent.height / 18
-            color: "#121212"
-            border.color: "#242424"
+            color: "#f2f2f2"
+            border.color: "lightgrey"
             border.width: 2
             anchors {
                 top: parent.top
@@ -35,7 +35,7 @@ Rectangle {
             Text {
                 id: wifistatuslabel
                 text: "Wi-Fi"
-                color: "white"
+                color: "black"
                 font.bold: true
                 verticalAlignment: Text.AlignVCenter
                 anchors {
@@ -84,8 +84,8 @@ Rectangle {
             id: bluetoothstatus
             width: parent.width * 4 / 5
             height: parent.height / 18
-            color: "#121212"
-            border.color: "#242424"
+            color: "#f2f2f2"
+            border.color: "lightgrey"
             border.width: 2
             anchors {
                 top: parent.top
@@ -100,7 +100,7 @@ Rectangle {
             Text {
                 id: bluetoothlabel
                 text: "Bluetooth"
-                color: "white"
+                color: "black"
                 font.bold: true
                 verticalAlignment: Text.AlignVCenter
                 anchors {

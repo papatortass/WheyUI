@@ -7,7 +7,7 @@ import "../../../Icons"
     Rectangle{
         id: softwaremodule
         color: "transparent"
-        border.color: "#242424"
+        border.color: "white"
         border.width: 2
         anchors{
             top:parent.top
@@ -23,7 +23,7 @@ import "../../../Icons"
 
         Rectangle{
             id:softwareinfobackground
-            color:"#121212"
+            color:"#f2f2f2"
             height: parent.height * 2 / 9
             width: parent.width //- 10
             anchors {
@@ -33,7 +33,7 @@ import "../../../Icons"
             }
             radius: 5
             opacity: 0.5
-            border.color: "#242424"
+            border.color: "white"
         }
 
         Rectangle{
@@ -99,7 +99,7 @@ import "../../../Icons"
                     Text {
                         id: name
                         text: "AROOZ UI"
-                        color: "white"
+                        color: "black"
                         font.bold: true
                         font.pixelSize: parent.height * 4 / 3
                         font.family: "Fantasy"
@@ -114,7 +114,7 @@ import "../../../Icons"
                 Text {
                     id: version
                     text: "Version: 1.0"
-                    color: "white"
+                    color: "black"
                     font.pixelSize: name.font.pixelSize * 2/ 5
                     font.family: "Fantasy"
                     anchors{
@@ -130,7 +130,7 @@ import "../../../Icons"
                 Text {
                     id: releasedate
                     text: "Release Date: 15/08/2023"
-                    color: "white"
+                    color: "black"
                     font.pixelSize: name.font.pixelSize * 2/ 5
                     font.family: "Fantasy"
                     anchors{
@@ -145,7 +145,7 @@ import "../../../Icons"
                 Text {
                     id: creator
                     text: "Created By: Rafael \"papatortas\" Costa"
-                    color: "white"
+                    color: "black"
                     font.pixelSize: name.font.pixelSize * 2/ 5
                     font.family: "Fantasy"
                     anchors{
@@ -160,7 +160,7 @@ import "../../../Icons"
                 Text {
                     id: githubpage
                     text: "Github Page: github.com/papatortass/AroozUI"
-                    color: "white"
+                    color: "black"
                     font.pixelSize: name.font.pixelSize * 2/ 5
                     font.family: "Fantasy"
                     anchors{
@@ -206,7 +206,7 @@ import "../../../Icons"
                         font.family: "Fantasy"
                         font.pixelSize: parent.height / 3
                         font.bold: true
-                        color: "white"
+                        color: "black"
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         anchors{
@@ -224,7 +224,7 @@ import "../../../Icons"
                         font.family: "Fantasy"
                         font.pixelSize: parent.height / 6
                         font.bold: true
-                        color: "white"
+                        color: "black"
                         horizontalAlignment: Text.AlignHLeft
                         verticalAlignment: Text.AlignVCenter
                         anchors{
@@ -248,7 +248,7 @@ import "../../../Icons"
                         bottomMargin: height / 2
                         rightMargin: 55
                     }
-                    color:"#121212"
+                    color:"#f2f2f2"
                     radius: 5
 
                     Button{

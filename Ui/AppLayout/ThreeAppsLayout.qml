@@ -1,4 +1,5 @@
 import QtQuick 2.15
+import QtQuick.Effects
 import "../Apps/SettingsApp"
 import "../Apps/MapsApp"
 
@@ -58,4 +59,5 @@ Rectangle {
             }
         }
     }
+
 }

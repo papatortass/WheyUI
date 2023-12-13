@@ -5,17 +5,16 @@ import "ContentPages"
 
 Rectangle{
     id: settingsappmodule
-    height: parent.height * 19/20
-    width: parent.width * 18/20
-    opacity: 0.9
-    color:"#121212"
+    height: parent.height
+    width: parent.width
+    color:"#f2f2f2"
     radius: 10
     anchors{
         leftMargin: parent.width / 20
         horizontalCenter: parent.horizontalCenter
     }
 
-    Rectangle{
+    Item{
         id: categories
         width: parent.width / 5
         height: parent.height
@@ -24,11 +23,10 @@ Rectangle{
             left: parent.left
             bottom: parent.bottom
         }
-        color:"transparent"
 
         Rectangle{
             id: connections
-            color:"#242424"
+            color:"white"
             height: parent.height / 18
             width: parent.width * 4/ 5
             anchors{
@@ -61,7 +59,7 @@ Rectangle{
             Text{
                 id: connectionslabel
                 text: "Connections"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -80,7 +78,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "#242424"
+                    connections.color = "white"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -128,7 +126,7 @@ Rectangle{
             Text{
                 id: displaylabel
                 text: "Display"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -148,7 +146,7 @@ Rectangle{
                 hoverEnabled: true
                 onClicked: {
                     connections.color = "transparent"
-                    display.color = "#242424"
+                    display.color = "white"
                     lights.color = "transparent"
                     lights1.color = "transparent"
                     lights2.color = "transparent"
@@ -192,7 +190,7 @@ Rectangle{
             Text{
                 id: lightslabel
                 text: "Lights"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -213,7 +211,7 @@ Rectangle{
                 onClicked: {
                     connections.color = "transparent"
                     display.color = "transparent"
-                    lights.color = "#242424"
+                    lights.color = "white"
                     lights1.color = "transparent"
                     lights2.color = "transparent"
                     lights3.color = "transparent"
@@ -255,7 +253,7 @@ Rectangle{
             Text{
                 id: lightslabel1
                 text: "Lights"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -277,7 +275,7 @@ Rectangle{
                     connections.color = "transparent"
                     display.color = "transparent"
                     lights.color = "transparent"
-                    lights1.color = "#242424"
+                    lights1.color = "white"
                     lights2.color = "transparent"
                     lights3.color = "transparent"
                     lights4.color = "transparent"
@@ -318,7 +316,7 @@ Rectangle{
             Text{
                 id: lightslabel2
                 text: "Lights"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -341,7 +339,7 @@ Rectangle{
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
-                    lights2.color = "#242424"
+                    lights2.color = "white"
                     lights3.color = "transparent"
                     lights4.color = "transparent"
                     software.color = "transparent"
@@ -381,7 +379,7 @@ Rectangle{
             Text{
                 id: lightslabel3
                 text: "Lights"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -405,7 +403,7 @@ Rectangle{
                     lights.color = "transparent"
                     lights1.color = "transparent"
                     lights2.color = "transparent"
-                    lights3.color = "#242424"
+                    lights3.color = "white"
                     lights4.color = "transparent"
                     software.color = "transparent"
                 }
@@ -444,7 +442,7 @@ Rectangle{
             Text{
                 id: lightslabel4
                 text: "Lights"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -469,7 +467,7 @@ Rectangle{
                     lights1.color = "transparent"
                     lights2.color = "transparent"
                     lights3.color = "transparent"
-                    lights4.color = "#242424"
+                    lights4.color = "white"
                     software.color = "transparent"
                 }
             }
@@ -507,7 +505,7 @@ Rectangle{
             Text{
                 id: softwarelabel
                 text: "Software"
-                color:"white"
+                color:"black"
                 font.bold: true
                 anchors{
                     top: parent.top
@@ -533,11 +531,23 @@ Rectangle{
                     lights2.color = "transparent"
                     lights3.color = "transparent"
                     lights4.color = "transparent"
-                    software.color = "#242424"
+                    software.color = "white"
                     connectionscontent.visible = false
                     softwarecontent.visible = true
                 }
             }
+        }
+
+        Rectangle{
+            color: "lightgrey"
+            height: parent.height * 9/10
+            width: 2
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.rightMargin: -1
+            anchors.topMargin: parent.height / 20
+            anchors.bottomMargin: parent.height / 20
         }
     }
 
@@ -553,14 +563,6 @@ Rectangle{
             margins: 10
         }
         color:"transparent"
-
-        Image {
-            id: topography
-            source: "../../Icons/topography.png"
-            height: parent.height
-            width: parent.width
-            fillMode: Image.PreserveAspectCrop
-        }
 
         ConnectionsContent{
             id:connectionscontent

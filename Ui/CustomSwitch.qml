@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 
 Switch {
     id:root
-    property  color checkedcolor: "#0ACF97"
+    property  color checkedcolor: "#3366ff"
     checked: true
 
     indicator: Rectangle{

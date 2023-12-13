@@ -54,32 +54,4 @@ Rectangle {
             bottomMargin: 10
         }
     }
-
-    property alias settingsapp: settingsapp
-
-    SettingsApp {
-        id:settingsapp
-        visible: false
-        property int spaceRequirement: 1
-
-        property real initialY: windowcontent.height
-        property real finalY: windowcontent.height - settingsapp.height
-
-        NumberAnimation {
-            id: slideAnimation
-            target: settingsapp
-            property: "y"
-            duration: 300
-            easing.type: Easing.InOutQuad
-        }
-
-        onVisibleChanged: {
-            if (!visible) {
-            } else {
-                slideAnimation.from = initialY;
-                slideAnimation.to = finalY - 10;
-            }
-            slideAnimation.start();
-        }
-    }
 }
