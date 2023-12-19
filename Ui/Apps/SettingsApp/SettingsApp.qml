@@ -25,7 +25,7 @@ Rectangle{
         }
 
         Rectangle{
-            id: connections
+            id: controls
             color:"white"
             height: parent.height / 18
             width: parent.width * 4/ 5
@@ -41,7 +41,7 @@ Rectangle{
             radius: 10
 
             Image {
-                id: connectionsicon
+                id: controlsicon
                 source: "Icons/quickcontrols.svg"
                 height: parent.height * 4 / 5
                 width: parent.height * 4 / 5
@@ -57,8 +57,8 @@ Rectangle{
             }
 
             Text{
-                id: connectionslabel
-                text: "Connections"
+                id: controlslabel
+                text: "controls"
                 color:"black"
                 font.bold: true
                 anchors{
@@ -78,7 +78,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "white"
+                    controls.color = "white"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -87,7 +87,7 @@ Rectangle{
                     lights4.color = "transparent"
                     software.color = "transparent"
 
-                    connectionscontent.visible = true
+                    controlscontent.visible = true
                     softwarecontent.visible = false
                 }
             }
@@ -99,7 +99,7 @@ Rectangle{
             height: parent.height / 18
             width: parent.width * 4 / 5
             anchors {
-                top: connections.bottom
+                top: controls.bottom
                 left: parent.left
                 right: parent.right
                 margins: 10
@@ -145,7 +145,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "white"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -209,7 +209,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "transparent"
                     lights.color = "white"
                     lights1.color = "transparent"
@@ -272,7 +272,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "white"
@@ -335,7 +335,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -398,7 +398,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -461,7 +461,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -524,7 +524,7 @@ Rectangle{
                 acceptedButtons: Qt.LeftButton
                 hoverEnabled: true
                 onClicked: {
-                    connections.color = "transparent"
+                    controls.color = "transparent"
                     display.color = "transparent"
                     lights.color = "transparent"
                     lights1.color = "transparent"
@@ -532,7 +532,7 @@ Rectangle{
                     lights3.color = "transparent"
                     lights4.color = "transparent"
                     software.color = "white"
-                    connectionscontent.visible = false
+                    controlscontent.visible = false
                     softwarecontent.visible = true
                 }
             }
@@ -564,8 +564,8 @@ Rectangle{
         }
         color:"transparent"
 
-        ConnectionsContent{
-            id:connectionscontent
+        ControlsContent{
+            id:controlscontent
         }
 
         SoftwareContent{

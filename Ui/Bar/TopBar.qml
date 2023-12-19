@@ -86,10 +86,7 @@ Rectangle {
             color: "#212121"
             anchors{
                 right: profilepic.left
-                top: parent.top
-                bottom: parent.bottom
                 verticalCenter: parent.verticalCenter
-                topMargin: parent.height / 6
                 rightMargin: 10
             }
             horizontalAlignment: Text.AlignHCenter

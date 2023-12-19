@@ -55,7 +55,6 @@ import "../../../Icons"
                     top:parent.top
                     left: parent.left
                     bottom: parent.bottom
-                    right: logocontainer.left
                 }
 
                 Image {
